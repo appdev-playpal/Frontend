@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="profile_title" type="id" />
+    <item name="name_label" type="id" />
+    <item name="name_value" type="id" />
+    <item name="username_label" type="id" />
+    <item name="username_value" type="id" />
+    <item name="email_label" type="id" />
+    <item name="email_value" type="id" />
+    <item name="links_label" type="id" />
+    <item name="bio_label" type="id" />
+    <item name="bio_value" type="id" />
+    <item name="textName" type="id" />
+</resources>

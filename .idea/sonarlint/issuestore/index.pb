@@ -15,3 +15,21 @@ X
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+D
+app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
+i
+9app/src/main/java/com/example/frontend/ProfileFragment.kt,6\3\63583564450d9fc9493fcc0cb019d9486fe78366
+j
+:app/src/main/java/com/example/frontend/SettingsFragment.kt,9\6\96d9c77ef51b292e54c60f3cbe9901cca96ba723
+e
+5app/src/main/java/com/example/frontend/ProfileItem.kt,1\5\15736eb3df3f0729bed21c288ac79a98df6b421e
+h
+8app/src/main/java/com/example/frontend/ProfileAdapter.kt,f\c\fc77734785649c56123aa3bd0dbcd2bbe5cf69cf
+t
+Dapp/src/main/java/com/example/frontend/fragments/LocationFragment.kt,1\6\1671792791a3fc22bcff46ce8831727dd94ba9de
+t
+Dapp/src/main/java/com/example/frontend/fragments/SettingsFragment.kt,4\5\45ca88da92ca2b9cba4af225c92cef2db2a7947b
+s
+Capp/src/main/java/com/example/frontend/fragments/ProfileFragment.kt,4\d\4dc83d6b8de499ddd61fa6250f28f95dbbb09239
