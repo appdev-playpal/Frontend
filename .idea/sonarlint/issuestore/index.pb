@@ -1,8 +1,6 @@
 
 f
 6app/src/main/java/com/example/frontend/MainActivity.kt,5\7\578fddd004d92ba2c9d3207f1deae77d8e9a97b3
-j
-:app/src/main/java/com/example/frontend/LocationFragment.kt,b\2\b227eed42662554076a5318ccca24cb891671425
 I
 gradle/libs.versions.toml,d\7\d7595319a0658be6f1ed500ad590d42e4b28bc4f
 Å
@@ -15,3 +13,13 @@ X
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+D
+app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
+t
+Dapp/src/main/java/com/example/frontend/fragments/LocationFragment.kt,1\6\1671792791a3fc22bcff46ce8831727dd94ba9de
+t
+Dapp/src/main/java/com/example/frontend/fragments/SettingsFragment.kt,4\5\45ca88da92ca2b9cba4af225c92cef2db2a7947b
+s
+Capp/src/main/java/com/example/frontend/fragments/ProfileFragment.kt,4\d\4dc83d6b8de499ddd61fa6250f28f95dbbb09239

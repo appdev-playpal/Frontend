@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/green">
+
+            <TextView
+                android:id="@+id/settings_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/settings"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginTop="50dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/hobbysButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/hobbies"
+                android:drawablePadding="20dp"
+                android:paddingStart="20dp"
+                android:text="@string/my_hobbies"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="@android:style/Widget.Button"
+                android:textAlignment="viewStart">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/settingsButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/settings2"
+                android:drawablePadding="20dp"
+                android:paddingStart="20dp"
+                android:text="@string/account_settings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="@android:style/Widget.Button"
+                android:textAlignment="viewStart">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/infoButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/person"
+                android:drawablePadding="20dp"
+                android:paddingStart="20dp"
+                android:text="@string/personal_information"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="@android:style/Widget.Button"
+                android:textAlignment="viewStart">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/notificationButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/notification"
+                android:drawablePadding="20dp"
+                android:paddingStart="20dp"
+                android:text="@string/notification"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="@android:style/Widget.Button"
+                android:textAlignment="viewStart">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/securityButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/security"
+                android:drawablePadding="20dp"
+                android:paddingStart="20dp"
+                android:text="@string/security_settings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="@android:style/Widget.Button"
+                android:textAlignment="viewStart">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <Button
+                android:id="@+id/buttonLogout"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/green"
+                android:text="@string/save"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
