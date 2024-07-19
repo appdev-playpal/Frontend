@@ -10,9 +10,6 @@ import com.example.frontend.R
 
 class SettingsFragment : Fragment() {
 
-    private var param1: String? = null
-    private var param2: String? = null
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

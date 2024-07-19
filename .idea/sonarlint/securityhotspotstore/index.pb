@@ -1,8 +1,6 @@
 
 f
 6app/src/main/java/com/example/frontend/MainActivity.kt,5\7\578fddd004d92ba2c9d3207f1deae77d8e9a97b3
-j
-:app/src/main/java/com/example/frontend/LocationFragment.kt,b\2\b227eed42662554076a5318ccca24cb891671425
 I
 gradle/libs.versions.toml,d\7\d7595319a0658be6f1ed500ad590d42e4b28bc4f
 Å
@@ -19,14 +17,6 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 D
 app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
-i
-9app/src/main/java/com/example/frontend/ProfileFragment.kt,6\3\63583564450d9fc9493fcc0cb019d9486fe78366
-j
-:app/src/main/java/com/example/frontend/SettingsFragment.kt,9\6\96d9c77ef51b292e54c60f3cbe9901cca96ba723
-e
-5app/src/main/java/com/example/frontend/ProfileItem.kt,1\5\15736eb3df3f0729bed21c288ac79a98df6b421e
-h
-8app/src/main/java/com/example/frontend/ProfileAdapter.kt,f\c\fc77734785649c56123aa3bd0dbcd2bbe5cf69cf
 t
 Dapp/src/main/java/com/example/frontend/fragments/LocationFragment.kt,1\6\1671792791a3fc22bcff46ce8831727dd94ba9de
 t
