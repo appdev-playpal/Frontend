@@ -49,4 +49,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation ("com.google.maps.android:android-maps-utils:3.8.2")
     implementation ("com.google.maps.android:maps-utils-ktx:5.1.1")
+    implementation(libs.okhttp)
+    implementation(libs.gson)
+    implementation(libs.lombok)
 }
