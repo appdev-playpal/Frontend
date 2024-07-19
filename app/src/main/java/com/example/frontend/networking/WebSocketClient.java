@@ -2,6 +2,8 @@ package com.example.frontend.networking;
 
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 
@@ -33,7 +35,7 @@ public class WebSocketClient {
 
         webSocket = client.newWebSocket(request, new WebSocketListener() {
             @Override
-            public void onOpen(WebSocket webSocket, Response response) {
+            public void onOpen(@NonNull WebSocket webSocket, @NonNull Response response) {
                 Log.d("Network", "connected");
             }
 
@@ -59,7 +61,7 @@ public class WebSocketClient {
             @Override
             public void onFailure(WebSocket webSocket, Throwable t, Response response) {
                 // Permission needed to transmit cleartext in the manifest
-                Log.d("Network", "connection failure");
+                Log.d("Network", "connection failure", t);
             }
         });
     }
