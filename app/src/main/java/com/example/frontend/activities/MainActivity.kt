@@ -17,6 +17,8 @@ import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
 
+
+
     var networkHandler: WebSocketClient? = null
     private val gson = Gson()
     /*

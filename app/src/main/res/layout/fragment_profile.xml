@@ -40,7 +40,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="20dp"
                 android:contentDescription="@string/profile_pic"
-                android:src="@drawable/profile"/>
+                android:src="@drawable/icon_account_circle_black"/>
 
             <TextView
                 android:id="@id/textName"
@@ -68,14 +68,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="@string/fullname">
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:drawableStart="@drawable/person"
                     android:drawablePadding="10dp"
-                    android:text="@string/fullname1" />
+                    android:hint="@string/fullname"
+                    android:inputType="textPersonName"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,7 +91,7 @@
                     android:layout_height="48dp"
                     android:drawableStart="@drawable/email"
                     android:drawablePadding="10dp"
-                    android:text="@string/email1" />
+                    android:inputType="textEmailAddress" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -98,14 +99,15 @@
                 android:id="@+id/edittext_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/phone_number">
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:drawableStart="@drawable/phone"
                     android:drawablePadding="10dp"
-                    android:text="@string/phone_number1" />
+                    android:hint="@string/phone_number1"
+                    android:inputType="number"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,14 +115,15 @@
                 android:id="@+id/edittext_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/password">
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:drawableStart="@drawable/password"
                     android:drawablePadding="10dp"
-                    android:text="@string/password1" />
+                    android:hint="@string/password1"
+                    android:inputType="textPassword"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 

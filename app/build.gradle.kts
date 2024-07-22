@@ -47,6 +47,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
     implementation ("com.google.maps.android:android-maps-utils:3.8.2")
     implementation ("com.google.maps.android:maps-utils-ktx:5.1.1")
     implementation(libs.okhttp)
