@@ -1,4 +1,4 @@
-package com.example.frontend
+package com.example.frontend.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.frontend.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -82,12 +83,12 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    // Nach erfolgreicher Anmeldung zur HomeActivity navigieren
+    // Nach erfolgreicher Anmeldung zu HomeActivity navigieren
     private fun handleSignInResult(account: GoogleSignInAccount) {
         navigateToHome()
     }
 
-    // Funktion, um zur HomeActivity zu navigieren
+    // Funktion, um zu HomeActivity zu navigieren
     private fun navigateToHome() {
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
