@@ -1,10 +1,10 @@
-package com.example.frontend;
-
+package com.example.frontend.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.frontend.R;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -16,10 +16,10 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
-        }, 3000);
+        }, 3000); // 3 Sekunden
     }
 }
