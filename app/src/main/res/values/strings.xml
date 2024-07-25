@@ -31,4 +31,5 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+    <string name="home_welcome">Welcome to the Home Fragment</string>
 </resources>
