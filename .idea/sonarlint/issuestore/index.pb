@@ -1,12 +1,6 @@
 
-f
-6app/src/main/java/com/example/frontend/MainActivity.kt,5\7\578fddd004d92ba2c9d3207f1deae77d8e9a97b3
 I
 gradle/libs.versions.toml,d\7\d7595319a0658be6f1ed500ad590d42e4b28bc4f
-Å
-Q.idea/sonarlint/securityhotspotstore/5/7/578fddd004d92ba2c9d3207f1deae77d8e9a97b3,a\4\a476d6a38f06349a5aa47a0c7a7366048bedb887
-w
-G.idea/sonarlint/issuestore/5/7/578fddd004d92ba2c9d3207f1deae77d8e9a97b3,8\8\88b668de11cd969ee29dd5dfccd7b85c26482512
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 ]
@@ -23,3 +17,7 @@ t
 Dapp/src/main/java/com/example/frontend/fragments/SettingsFragment.kt,4\5\45ca88da92ca2b9cba4af225c92cef2db2a7947b
 s
 Capp/src/main/java/com/example/frontend/fragments/ProfileFragment.kt,4\d\4dc83d6b8de499ddd61fa6250f28f95dbbb09239
+r
+Bapp/src/main/java/com/example/frontend/activities/LoginActivity.kt,c\b\cbe85b09f67c15e1444088a7d2bc9b46eaf932e7
+u
+Eapp/src/main/java/com/example/frontend/activities/SplashActivity.java,7\0\70eee5664d4968d80b1e2c15181d3dd61de05ef3

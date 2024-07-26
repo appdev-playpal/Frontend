@@ -75,7 +75,7 @@
                     android:layout_height="48dp"
                     android:drawableStart="@drawable/person"
                     android:drawablePadding="10dp"
-                    android:hint="@string/fullname"
+                    android:hint="@string/fullname1"
                     android:inputType="textPersonName"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -84,7 +84,7 @@
                 android:id="@+id/edittext_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/email">
+                android:hint="@string/email1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
