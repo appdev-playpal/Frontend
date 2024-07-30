@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Show the HobbyFragment by default
+
         if (savedInstanceState == null) {
             bottomNavigation.selectedItemId = R.id.navigation_home
         }
