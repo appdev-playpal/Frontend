@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.frontend.activities
 
 import android.content.Intent
@@ -14,7 +16,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 
-@Suppress("DEPRECATION")
+
 class LoginActivity : AppCompatActivity() {
     private lateinit var emailInput: EditText
     private lateinit var loginButton: Button
@@ -74,14 +76,14 @@ class LoginActivity : AppCompatActivity() {
             try {
                 val account = task.getResult(ApiException::class.java)
                 if (account != null) {
-                    handleSignInResult(account)
+                    navigateToHome()
                 }
             } catch (e: ApiException) {
-                // Handle failure
                 e.printStackTrace()
             }
         }
     }
+
 
     private fun handleSignInResult(account: GoogleSignInAccount?) {
         if (account != null) {

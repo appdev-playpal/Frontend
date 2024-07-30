@@ -5,7 +5,6 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.frontend.adapters.HobbyAdapter
 import com.example.frontend.models.HobbyModel
 
 class Database_Helper(context: Context) : SQLiteOpenHelper(context, _dbName, null, _dbVersion) {
