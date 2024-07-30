@@ -25,4 +25,11 @@
     <string name="notification">Notification</string>
     <string name="security_settings">Security Settings</string>
     <string name="save">Save</string>
+    <string-array name="players_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string name="home_welcome">Welcome to the Home Fragment</string>
 </resources>
