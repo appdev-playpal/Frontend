@@ -3,12 +3,15 @@ package com.example.frontend.activities
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.example.frontend.R
+import com.example.frontend.database.Database_Helper
+import com.example.frontend.models.HobbyModel
 
 class AddHobbyActivity : AppCompatActivity() {
 
@@ -32,6 +35,16 @@ class AddHobbyActivity : AppCompatActivity() {
         addHobbyButton.setOnClickListener {
             val title = hobbyHint.text.toString()
             val numberOfPlayers = requiredPlayers.selectedItem.toString().toInt()
+
+            // Add hobby to the database
+            val hobby = HobbyModel(title, numberOfPlayers)
+            val databaseHelper = Database_Helper(this)
+            val success = databaseHelper.addHobbySmall(hobby)
+            if (success) {
+                Log.d("Database", "Hobby added successfully")
+            } else {
+                Log.d("Database", "Failed to add hobby")
+            }
 
             val resultIntent = Intent()
             resultIntent.putExtra("title", title)
