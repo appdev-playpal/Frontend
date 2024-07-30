@@ -10,4 +10,12 @@ class HobbyModel {
     var location : String = ""
     var latitude : Double = 0.0
     var longitude : Double = 0.0
+
+    constructor() {}
+
+    constructor(title: String, number: Int) {
+        this.title = title
+        this.number = number
+    }
+
 }

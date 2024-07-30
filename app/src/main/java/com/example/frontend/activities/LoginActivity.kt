@@ -2,6 +2,7 @@ package com.example.frontend.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -13,6 +14,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 
+@Suppress("DEPRECATION")
 class LoginActivity : AppCompatActivity() {
     private lateinit var emailInput: EditText
     private lateinit var loginButton: Button
@@ -63,7 +65,7 @@ class LoginActivity : AppCompatActivity() {
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
-
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -81,13 +83,19 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun handleSignInResult(account: GoogleSignInAccount) {
-        navigateToHome()
+    private fun handleSignInResult(account: GoogleSignInAccount?) {
+        if (account != null) {
+            // Account is not null, proceed with navigation
+            navigateToHome()
+        } else {
+            // Account is null, handle the error
+            Log.e("Error", "Account is null")
+            // You can also display an error message to the user here
+        }
     }
 
     private fun navigateToHome() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
-        finish()
     }
 }

@@ -5,9 +5,12 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.frontend.adapters.HobbyAdapter
 import com.example.frontend.models.HobbyModel
 
 class Database_Helper(context: Context) : SQLiteOpenHelper(context, _dbName, null, _dbVersion) {
+
+    private var idCounter = 1
 
     companion object {
         private val _dbName = "playpal"
@@ -25,7 +28,7 @@ class Database_Helper(context: Context) : SQLiteOpenHelper(context, _dbName, nul
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        val Create_Table = "CREATE TABLE $tableName ($id INTEGER PRIMARY KEY, $user TEXT, $title TEXT, $description TEXT, $number INTEGER, $date TEXT, $location TEXT, $latitude DOUBLE, $longitude DOUBLE);"
+        val Create_Table = "CREATE TABLE $tableName ($id INTEGER PRIMARY KEY AUTOINCREMENT, $user TEXT, $title TEXT, $description TEXT, $number INTEGER, $date TEXT, $location TEXT, $latitude DOUBLE, $longitude DOUBLE);"
         db?.execSQL(Create_Table)
     }
 
@@ -96,6 +99,43 @@ class Database_Helper(context: Context) : SQLiteOpenHelper(context, _dbName, nul
         db.close()
 
         return (Integer.parseInt("$_success") != -1)
+    }
+
+    /// <summary>
+    /// Adds a hobby with reduced properties to the database
+    /// </summary>
+    /// <param name="NewHobby"><c>HobbyModel</c> A new instance of type HobbyModel</param>
+    /// <returns>
+    /// A boolean to see if the addition was successful
+    /// </returns>
+    fun addHobbySmall(NewHobby : HobbyModel): Boolean {
+        val db = this.writableDatabase
+
+        // Get the maximum ID
+        val cursor = db.query(tableName, arrayOf("MAX($id)"), null, null, null, null, null)
+        var maxId = 0
+        if (cursor.moveToFirst()) {
+            maxId = cursor.getInt(0)
+        }
+        cursor.close()
+
+        // Generate a new ID
+        NewHobby.id = maxId + 1
+
+        val values = ContentValues()
+        values.put(id, NewHobby.id)
+        values.put(title, NewHobby.title)
+        values.put(number, NewHobby.number)
+
+        val _success = db.insert(tableName, null, values)
+        db.close()
+
+        if (_success!= -1L) {
+            // Notify the adapter of the change
+            return true
+        } else {
+            return false
+        }
     }
 
     /// <summary>

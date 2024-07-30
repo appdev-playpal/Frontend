@@ -1,5 +1,6 @@
 package com.example.frontend.activities
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -10,11 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.frontend.R
 import com.example.frontend.adapters.HobbyAdapter
+import com.example.frontend.database.Database_Helper
 import com.example.frontend.fragments.LocationFragment
 import com.example.frontend.fragments.ProfileFragment
 import com.example.frontend.fragments.SettingsFragment
 import com.example.frontend.messages.MessageType
 import com.example.frontend.messages.TestMessage
+import com.example.frontend.models.HobbyModel
 import com.example.frontend.networking.WebSocketClient
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -23,7 +26,7 @@ import com.google.gson.Gson
 class MainActivity : AppCompatActivity() {
 
     private lateinit var hobbyAdapter: HobbyAdapter
-    private val hobbies = mutableListOf<Hobby>()
+    private val hobbies = mutableListOf<HobbyModel>()
     private val gson = Gson()
     var networkHandler: WebSocketClient? = null
 
@@ -77,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == REQUEST_CODE_ADD_HOBBY && resultCode == Activity.RESULT_OK) {
             val title = data?.getStringExtra("title") ?: return
             val numberOfPlayers = data.getIntExtra("numberOfPlayers", 0)
-            val hobby = Hobby(title, numberOfPlayers)
+            val hobby = HobbyModel(title, numberOfPlayers)
             hobbies.add(hobby)
             hobbyAdapter.notifyDataSetChanged()
         }
