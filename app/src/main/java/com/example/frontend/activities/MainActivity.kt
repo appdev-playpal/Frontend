@@ -8,6 +8,7 @@ import com.example.frontend.fragments.HobbyFragment
 import com.example.frontend.fragments.LocationFragment
 import com.example.frontend.fragments.ProfileFragment
 import com.example.frontend.fragments.SettingsFragment
+import com.example.frontend.messages.HobbyMessage
 import com.example.frontend.messages.MessageType
 import com.example.frontend.messages.TestMessage
 import com.example.frontend.networking.WebSocketClient
@@ -22,6 +23,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        networkHandler = WebSocketClient()
+        connectToWebSocketServer()
+        sendMessage()
 
         // BottomNavigationView setup
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_nav)
@@ -51,10 +56,6 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             bottomNavigation.selectedItemId = R.id.navigation_home
         }
-
-        networkHandler = WebSocketClient()
-        connectToWebSocketServer()
-        sendMessage()
     }
 
     private fun openFragment(fragment: Fragment) {

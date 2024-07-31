@@ -12,12 +12,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.frontend.R
 import com.example.frontend.activities.AddHobbyActivity
 import com.example.frontend.activities.HobbyAdapter
+import com.example.frontend.messages.HobbyMessage
+import com.example.frontend.messages.MessageType
 import com.example.frontend.models.HobbyModel
+import com.example.frontend.networking.WebSocketClient
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.gson.Gson
 
 @Suppress("DEPRECATION")
 class HobbyFragment : Fragment() {
 
+    private val gson = Gson()
+    var networkHandler: WebSocketClient? = null
     private var hobbyAdapter: HobbyAdapter? = null
     private val hobbies = ArrayList<HobbyModel>()
 
@@ -43,6 +49,8 @@ class HobbyFragment : Fragment() {
             val intent = Intent(activity, AddHobbyActivity::class.java)
             startActivityForResult(intent, REQUEST_CODE_ADD_HOBBY)
         }
+        networkHandler = WebSocketClient()
+        connectToWebSocketServer()
 
         return view
     }
@@ -57,7 +65,30 @@ class HobbyFragment : Fragment() {
                 val hobby = HobbyModel(title, numberOfPlayers)
                 hobbies.add(hobby)
                 hobbyAdapter?.notifyDataSetChanged()
+
+                sendHobbyMessage(hobby)
             }
+        }
+    }
+
+    private fun connectToWebSocketServer() {
+        networkHandler!!.addMessageHandler(MessageType.HOBBY.toString(), this::messageReceivedFromServer)
+        networkHandler!!.connectToServer()
+    }
+
+    private fun sendHobbyMessage(hobby: HobbyModel) {
+        val hobbyMessage= HobbyMessage()
+        hobbyMessage.id = hobby.id
+        hobbyMessage.title = hobby.title
+        hobbyMessage.number = hobby.number
+        val jsonMessage = gson.toJson(hobbyMessage)
+        networkHandler?.sendMessageToServer(jsonMessage)
+    }
+
+    private fun <T> messageReceivedFromServer(message: T) {
+        if (message is String) {
+            val jsonString = message
+            // Handle received message
         }
     }
 }
