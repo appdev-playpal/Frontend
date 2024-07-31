@@ -81,7 +81,6 @@ class MainActivity : AppCompatActivity() {
     private fun <T> messageReceivedFromServer(message: T) {
         if (message is String) {
             val jsonString = message
-            // Handle received message
         }
     }
 }
