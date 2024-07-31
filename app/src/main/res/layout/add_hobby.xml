@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".activities.AddHobbyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Add a hobby"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="@color/black"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/hobbyHint"
+            android:hint="Hobby"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:padding="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <Spinner
+            android:id="@+id/requiredPlayers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="18dp"/>
+
+        <Button
+            android:id="@+id/add_hobby_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Hobby"
+            android:backgroundTint="@color/loginButton"
+            android:padding="18dp"
+            android:layout_marginTop="32dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>
